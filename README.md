@@ -60,11 +60,22 @@ Base URL: `http://localhost:3001/api/v1`
 
 ## What "completed" means in my game
 
-[One or two sentences: when does a player count as having completed a game? For example: "A player completed the game when they answered every question, even if some answers were wrong or timed out."]
+A player is considered to have completed Board Wars when their pawn
+reaches the opposing edge of the 15 × 15 board. This is recorded in
+the database by setting `finished` to `TRUE` and saving `finished_at`.
+Players who do not reach the opposing edge before the game ends are
+included in the results with `completed` set to `false`.
 
 ## Tables
 
-[List your tables, one line each, in the order of your migrations.]
+1. `users` — Stores user accounts, school IDs, names, emails, and roles.
+2. `question_sets` — Stores question-set information and the host who created it.
+3. `questions` — Stores questions, question types, correct answer indexes, and time limits.
+4. `choices` — Stores the answer choices for each question.
+5. `game_sessions` — Stores game sessions, join codes, status, current round, and winning team.
+6. `seat` — Links a user account to a game session and prevents duplicate seats.
+7. `session_players` — Stores player nicknames, Red or Blue team assignment, pawn positions, answer counts, and finish status.
+8. `answers` — Stores submitted answers, selected choices, correctness, and submission timestamps.
 
 ## Database scripts
 
