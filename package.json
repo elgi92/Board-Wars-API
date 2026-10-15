@@ -1,7 +1,7 @@
 {
-  "name": "your-game-api",
+  "name": "Board-Wars-API",
   "version": "1.0.0",
-  "description": "CHANGE_ME - one sentence about your game (CS 313 Software Engineering 1)",
+  "description": "Board Wars is a multiplayer quiz strategy game where two secretly randomized teams compete on a 15×15 board by answering questions correctly, moving their pawns, and strategically blocking opponents to reach the opposing side first.",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -19,7 +19,7 @@
   "engines": {
     "node": ">=22"
   },
-  "author": "CHANGE_ME - your full name",
+  "author": "Luigi Miguel T. Gaspi",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^18.0.7",
